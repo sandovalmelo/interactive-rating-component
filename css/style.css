@@ -42,6 +42,7 @@ main {
 	margin: 1.5rem;
 	max-width: 380px;
 	border-radius: 30px;
+	min-height: 396px;
 }
 
 .star-icon {
@@ -105,6 +106,33 @@ p {
 	letter-spacing: 1.5px;
 }
 
+/* thanks state ====================================================== */
+
+.thanks-state {
+	text-align: center;
+}
+
+.thanks-selected {
+	margin: 1.5rem 0;
+	background-color: var(--dark-blue-opacity);
+	display: inline-block;
+	line-height: normal;
+	padding: 0.5rem 0.75rem;
+	color: var(--orange);
+	border-radius: 50px;
+	font-size: 1rem;
+}
+
+.thanks-title {
+	margin-bottom: 1.5rem;
+}
+
+.thanks-text {
+	font-size: 1rem;
+}
+
+/* media query ======================================================= */
+
 @media (min-width: 720px) {
 	.rating-btn:hover {
 		background-color: var(--medium-grey);
@@ -117,8 +145,4 @@ p {
 		background-color: var(--white);
 		cursor: pointer;
 	}
-}
-
-input[type="radio"] {
-	display: none;
 }

@@ -1,16 +1,19 @@
 const ratingBtns = Array.from(document.querySelectorAll(".rating-btn"));
 
+let selectRating;
+
 function selectBtn(event) {
 	const btnTarget = event.target;
-	ratingBtns.forEach((btn) => btn.classList.remove("selected"));
 
-	console.log(btnTarget.classList.contains("selected"));
+	ratingBtns.forEach((btn) => {
+		if (btn !== btnTarget) {
+			btn.classList.remove("selected");
+		} else {
+			btnTarget.classList.toggle("selected");
+		}
+	});
 
-	if (btnTarget.classList.contains("selected")) {
-		btnTarget.classList.remove("selected");
-	} else {
-		btnTarget.classList.add("selected");
-	}
+	console.dir(btnTarget.innerText);
 }
 
 ratingBtns.forEach((btn) => {
