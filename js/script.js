@@ -27,7 +27,6 @@ function selectBtn(event) {
 }
 
 function submitRating() {
-	console.log(selectRating);
 	if (selectRating) {
 		ratingState.hidden = true;
 		thanksState.hidden = false;

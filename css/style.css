@@ -16,6 +16,7 @@
 	--very-dark-blue-opacity: hsla(216, 12%, 8%, 0.5);
 	--orange: hsl(25, 97%, 53%);
 	--font-family: "Overpass", sans-serif;
+	--round-btn: 40px;
 }
 
 html {
@@ -40,9 +41,9 @@ main {
 	);
 	padding: 2rem;
 	margin: 1.5rem;
-	max-width: 380px;
 	border-radius: 30px;
-	min-height: 396px;
+	max-width: 400px;
+	/* min-height: 400px; */
 }
 
 .star-icon {
@@ -52,15 +53,13 @@ main {
 	justify-content: center;
 	padding: 10px;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-}
-
-h1 {
-	font-size: 1.5rem;
+	width: var(--round-btn);
+	height: var(--round-btn);
+	margin-bottom: 1.5rem;
 }
 
 .rating-title {
+	font-size: 1.5rem;
 	margin: 1rem 0;
 }
 
@@ -81,8 +80,8 @@ p {
 	border: none;
 	color: var(--light-grey);
 	border-radius: 50%;
-	height: 50px;
-	width: 50px;
+	height: var(--round-btn);
+	width: var(--round-btn);
 	font-weight: 700;
 	font-size: 1rem;
 	display: inline-block;
@@ -123,8 +122,9 @@ p {
 	font-size: 1rem;
 }
 
-.thanks-title {
-	margin-bottom: 1.5rem;
+h1.thanks-title {
+	margin-bottom: 1rem;
+	font-size: 1.75rem;
 }
 
 .thanks-text {
@@ -132,6 +132,12 @@ p {
 }
 
 /* media query ======================================================= */
+
+@media (min-width: 390px) {
+	:root {
+		--round-btn: 50px;
+	}
+}
 
 @media (min-width: 720px) {
 	.rating-btn:hover {
